@@ -29,8 +29,8 @@ public class LoginPage {
         return heading.getText().contains("AUTHENTICATION");
     }
 
-    public CreateAccountPage createNewAccount() {
-        userEmail.sendKeys("rektdingus@gmail.com");
+    public CreateAccountPage createNewAccount(String email) {
+        userEmail.sendKeys(email);
         submitEmailButton.click();
         return PageFactory.initElements(driver, CreateAccountPage.class);
     }

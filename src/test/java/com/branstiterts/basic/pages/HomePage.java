@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import com.branstiterts.basic.utility.Constant;
 
 /**
  * Created by tbranstiter on 2/2/2017.
@@ -16,7 +17,7 @@ public class HomePage {
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
-        driver.get(PAGE_URL);
+        driver.get(Constant.URL);
         PageFactory.initElements(driver, this);
     }
 
