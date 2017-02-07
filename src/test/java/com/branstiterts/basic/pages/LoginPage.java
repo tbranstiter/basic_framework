@@ -9,10 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by tbranstiter on 2/2/2017.
  */
-public class LoginPage {
+public class LoginPage extends BasePage {
     final static Logger logger = Logger.getLogger(LoginPage.class);
-
-    private WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;

@@ -10,10 +10,8 @@ import com.branstiterts.basic.utility.Constant;
 /**
  * Created by tbranstiter on 2/2/2017.
  */
-public class HomePage implements Page {
+public class HomePage extends BasePage implements Page {
     final static Logger logger = Logger.getLogger(HomePage.class);
-
-    private WebDriver driver;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;

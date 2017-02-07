@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 /**
  * Created by tbranstiter on 2/2/2017.
  */
-public class CreateAccountPage {
+public class CreateAccountPage extends BasePage {
     final static Logger logger = Logger.getLogger(CreateAccountPage.class);
 
     private WebDriver driver;

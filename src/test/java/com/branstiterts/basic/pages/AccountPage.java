@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by tbranstiter on 2/2/2017.
  */
-public class AccountPage {
+public class AccountPage extends BasePage {
     private WebDriver driver;
 
     public AccountPage(WebDriver driver) {
