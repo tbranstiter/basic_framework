@@ -18,7 +18,6 @@ public class CreateAccountPage {
 
     public CreateAccountPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
     }
 
     // Personal Information

@@ -2,6 +2,7 @@ package com.branstiterts.basic.tests;
 
 import com.branstiterts.basic.objects.UserAccount;
 import com.branstiterts.basic.pages.HomePage;
+import com.branstiterts.basic.pages.Page;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,8 +23,8 @@ public class CreateAccountTest extends BaseTest {
         logger.info("Creating a new user account...");
         UserAccount userAccount = new UserAccount(firstName, lastName, email, password, dobDay, dobMonth, dobYear, address, city, state, zipCode, phoneNumber);
 
-        HomePage home = new HomePage(driver);
-        home.clickLoginButton().createNewAccount(userAccount.getEmail()).setPersonalInfoForm(userAccount);
+        HomePage home = Page.get(driver, HomePage.class);
+        home.goTo().clickLoginButton().createNewAccount(userAccount.getEmail()).setPersonalInfoForm(userAccount);
         Assert.assertTrue(driver.getCurrentUrl().contains("my-account"), "Account creation was NOT successful!");
         logger.info("Account creation is complete and has been successful!");
     }

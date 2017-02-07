@@ -10,20 +10,13 @@ import com.branstiterts.basic.utility.Constant;
 /**
  * Created by tbranstiter on 2/2/2017.
  */
-public class HomePage {
+public class HomePage implements Page {
     final static Logger logger = Logger.getLogger(HomePage.class);
-
 
     private WebDriver driver;
 
-    // Home Page URL
-    private static final String PAGE_URL = "http://www.automationpractice.com";
-
     public HomePage(WebDriver driver) {
         this.driver = driver;
-        logger.debug("Browsing to the following URL: " + Constant.URL);
-        driver.get(Constant.URL);
-        PageFactory.initElements(driver, this);
     }
 
     @FindBy(className = "login")
@@ -35,4 +28,10 @@ public class HomePage {
         return PageFactory.initElements(driver, LoginPage.class);
     }
 
+    @Override
+    public HomePage goTo() {
+        logger.debug("Browsing to the following URL: " + Constant.URL);
+        driver.get(Constant.URL);
+        return this;
+    }
 }
